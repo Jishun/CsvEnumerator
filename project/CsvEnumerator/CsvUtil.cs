@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DotNetUtils.Interface;
+using DotNetUtils;
 
 namespace CsvEnumerator
 {
@@ -142,7 +142,7 @@ namespace CsvEnumerator
         {
             var enumable = new CsvEnumerable(csvRefString);
             var dataSet = new List<IList<string>>();
-            errors = errors ?? new List<string>();
+            errors = errors ?? new List<string>() ;
             int? count = null;
             foreach (var record in enumable)
             {

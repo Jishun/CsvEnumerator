@@ -21,7 +21,7 @@
     <DefineConstants>DEBUG;TRACE</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
-      <BuildPackage>true</BuildPackage>
+    <BuildPackage>true</BuildPackage>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>pdbonly</DebugType>
@@ -50,7 +50,7 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\DotNetUtils\project\DotNetUtils\DotNetUtils.csproj">
+    <ProjectReference Include="..\..\..\Templator\DotNetUtils\project\DotNetUtils\DotNetUtils.csproj">
       <Project>{87d9fe4b-8d29-46dc-83bf-77218875d91c}</Project>
       <Name>DotNetUtils</Name>
     </ProjectReference>
@@ -58,14 +58,14 @@
   <ItemGroup>
     <None Include="CsvEnumerable.nuspec" />
   </ItemGroup>
-    <Target BeforeTargets="BuildPackage" Name="PrePackage">
-        <PropertyGroup>
-            <BuildCommand>$(BuildCommand) -IncludeReferencedProjects</BuildCommand>
-        </PropertyGroup>
-    </Target>
+  <Target BeforeTargets="BuildPackage" Name="PrePackage">
+    <PropertyGroup>
+      <BuildCommand>$(BuildCommand) -IncludeReferencedProjects</BuildCommand>
+    </PropertyGroup>
+  </Target>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
-    <Import Project="$(SolutionDir)\.nuget\NuGet.targets" />
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">
   </Target>

@@ -1,6 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
-using DotNetUtils.Interface;
+using DotNetUtils;
 
 namespace CsvEnumerator
 {
