@@ -41,6 +41,25 @@ namespace CsvEnumerator
             return enforceQuote ? String.Concat("\"", sb, "\"") : sb.ToString();
         }
 
+        /// <summary>
+        /// Decode a csv field from an inpu string
+        /// </summary>
+        /// <param name="inputStream"></param>
+        /// <param name="allowUnmatchedQuote">whether to ignore unmatched quote</param>
+        /// <param name="inFile">indicates if this parsing is against a whole file to determine whether to return a null to indicate the end </param>
+        /// <returns></returns>
+        public static string DecodeCsvField(this string field, bool allowUnmatchedQuote, bool inFile = true)
+        {
+            return new SeekableString(field).DecodeCsvField(allowUnmatchedQuote, inFile);
+        }
+
+        /// <summary>
+        /// Decode a csv field from an inpu string
+        /// </summary>
+        /// <param name="inputStream"></param>
+        /// <param name="allowUnmatchedQuote">whether to ignore unmatched quote</param>
+        /// <param name="inFile">indicates if this parsing is against a whole file to determine whether to return a null to indicate the end </param>
+        /// <returns></returns>
         public static string DecodeCsvField(this ISeekable inputStream, bool allowUnmatchedQuote, bool inFile = true)
         {
             var count = 0;

@@ -12,6 +12,8 @@
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <BuildPackage>true</BuildPackage>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -33,6 +35,9 @@
     <BuildPackage>true</BuildPackage>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="DotNetUtils">
+      <HintPath>..\packages\DotNetUtils.1.0.0.0\lib\net45\DotNetUtils.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -50,13 +55,8 @@
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\Templator\DotNetUtils\project\DotNetUtils\DotNetUtils.csproj">
-      <Project>{87d9fe4b-8d29-46dc-83bf-77218875d91c}</Project>
-      <Name>DotNetUtils</Name>
-    </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
     <None Include="CsvEnumerable.nuspec" />
+    <None Include="packages.config" />
   </ItemGroup>
   <Target BeforeTargets="BuildPackage" Name="PrePackage">
     <PropertyGroup>
