@@ -6,9 +6,9 @@
     <title>Simple CSV enumerator</title>
     <authors>Jishun Duan</authors>
     <owners>Jishun Duan</owners>
-    <licenseUrl>https://github.com/djsxp/CsvEnumerator/blob/master/LICENSE</licenseUrl>
-    <projectUrl>https://github.com/djsxp/CsvEnumerator</projectUrl>
-    <iconUrl>https://github.com/djsxp/CsvEnumerator</iconUrl>
+    <licenseUrl>https://github.com/jishun/CsvEnumerator/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/jishun/CsvEnumerator</projectUrl>
+    <iconUrl>https://github.com/jishun/CsvEnumerator</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple enumerator for CSV files, output it as a table like 2 dimension list for further analysing</description>
     <releaseNotes>Include pdbs in package</releaseNotes>
