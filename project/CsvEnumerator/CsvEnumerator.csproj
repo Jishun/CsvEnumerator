@@ -35,9 +35,6 @@
     <BuildPackage>true</BuildPackage>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="DotNetUtils">
-      <HintPath>..\packages\DotNetUtils.1.0.1.1\lib\net45\DotNetUtils.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -52,11 +49,12 @@
     <Compile Include="CsvFieldEnumerator.cs" />
     <Compile Include="CsvRecordEnumerable.cs" />
     <Compile Include="CsvUtil.cs" />
+    <Compile Include="ISeekableString.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SeekableString.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="CsvEnumerable.nuspec" />
-    <None Include="packages.config" />
   </ItemGroup>
   <Target BeforeTargets="BuildPackage" Name="PrePackage">
     <PropertyGroup>

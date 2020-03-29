@@ -2,7 +2,7 @@
 <package >
   <metadata>
     <id>CsvEnumerator</id>
-    <version>1.0.0.1</version>
+    <version>1.0.0.2</version>
     <title>Simple CSV enumerator</title>
     <authors>Jishun Duan</authors>
     <owners>Jishun Duan</owners>
@@ -11,11 +11,8 @@
     <iconUrl>https://github.com/jishun/CsvEnumerator</iconUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>A simple enumerator for CSV files, output it as a table like 2 dimension list for further analysing</description>
-    <releaseNotes>Include pdbs in package</releaseNotes>
+    <releaseNotes>Include pdbs in package, include ISeekeable in implementation</releaseNotes>
     <copyright>Copyright Jishun Duan, 2011-2015</copyright>
     <tags>CSV, Enumerate</tags>
-    <dependencies>
-        <dependency id="DotNetUtils" version="1.0.1.1" />
-    </dependencies>
   </metadata>
 </package>

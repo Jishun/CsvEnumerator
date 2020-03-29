@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
-using DotNetUtils;
 
 namespace CsvEnumerator
 {
@@ -60,7 +59,7 @@ namespace CsvEnumerator
         /// <param name="allowUnmatchedQuote">whether to ignore unmatched quote</param>
         /// <param name="inFile">indicates if this parsing is against a whole file to determine whether to return a null to indicate the end </param>
         /// <returns></returns>
-        public static string DecodeCsvField(this ISeekable inputStream, bool allowUnmatchedQuote, bool inFile = true)
+        public static string DecodeCsvField(this ISeekableString inputStream, bool allowUnmatchedQuote, bool inFile = true)
         {
             var count = 0;
             bool? quote = null;
@@ -157,7 +156,7 @@ namespace CsvEnumerator
             }
         }
 
-        public static IList<IList<string>> ValidateCsv(this ISeekable csvRefString, IList<string> errors, bool allowEmptyFields = true, bool alignColumnCounts = true)
+        public static IList<IList<string>> ValidateCsv(this ISeekableString csvRefString, IList<string> errors, bool allowEmptyFields = true, bool alignColumnCounts = true)
         {
             var enumable = new CsvEnumerable(csvRefString);
             var dataSet = new List<IList<string>>();

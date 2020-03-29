@@ -1,15 +1,14 @@
 using System.Collections;
 using System.Collections.Generic;
-using DotNetUtils;
 
 namespace CsvEnumerator
 {
     public class CsvRecordEnumerable : IEnumerable<string>
     {
-        private readonly ISeekable _inputStream;
+        private readonly ISeekableString _inputStream;
         private int _position;
         private CsvFieldEnumerator _currentEnumerator;
-        public CsvRecordEnumerable(ISeekable inputStream)
+        public CsvRecordEnumerable(ISeekableString inputStream)
         {
             _inputStream = inputStream;
             _position = inputStream.Position;

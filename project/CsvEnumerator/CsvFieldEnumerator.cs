@@ -1,12 +1,11 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
-using DotNetUtils;
 
 namespace CsvEnumerator
 {
     public class CsvFieldEnumerator : IEnumerator<string>
     {
-        private readonly ISeekable _inputStream;
+        private readonly ISeekableString _inputStream;
         private readonly int _position;
 
         public string Current { get; private set; }
@@ -16,7 +15,7 @@ namespace CsvEnumerator
         {
             get { return Current; }
         }
-        public CsvFieldEnumerator(ISeekable inputStream)
+        public CsvFieldEnumerator(ISeekableString inputStream)
         {
             _inputStream = inputStream;
             _position = inputStream.Position;
