@@ -1,6 +1,10 @@
 # CsvEnumerator
 A simple enumerator for CSV files, output it as a table like 2 dimension list for further analysing
 
+## Installation 
+* Nuget pacakge available at https://www.nuget.org/packages/CsvEnumerator.NetStandard/
+* Older .netframework versions at https://www.nuget.org/packages/CsvEnumerator
+
 ## Example Usage:
 ```cs
 var logs = new List<string>();

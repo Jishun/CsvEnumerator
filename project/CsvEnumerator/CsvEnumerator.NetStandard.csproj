@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard1.0</TargetFramework>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <PackageProjectUrl>https://github.com/Jishun/CsvEnumerator</PackageProjectUrl>
+    <RepositoryUrl>https://github.com/Jishun/CsvEnumerator</RepositoryUrl>
+    <Authors>Jishun Duan</Authors>
+    <Description>Simple CSV parsing tool, to convert a csv file into a 2 dimension array as rows and columns for easy enumerating.</Description>
+  </PropertyGroup>
+
+</Project>

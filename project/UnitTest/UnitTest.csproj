@@ -56,9 +56,9 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\CsvEnumerator\CsvEnumerator.csproj">
-      <Project>{34d412a8-4859-45c5-aaff-46b1c81798d3}</Project>
-      <Name>CsvEnumerator</Name>
+    <ProjectReference Include="..\CsvEnumerator\CsvEnumerator.NetStandard.csproj">
+      <Project>{e102bf14-5539-4f65-9c86-8f1b7eeec433}</Project>
+      <Name>CsvEnumerator.NetStandard</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
