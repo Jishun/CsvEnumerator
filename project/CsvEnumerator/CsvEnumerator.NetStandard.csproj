@@ -7,6 +7,14 @@
     <RepositoryUrl>https://github.com/Jishun/CsvEnumerator</RepositoryUrl>
     <Authors>Jishun Duan</Authors>
     <Description>Simple CSV parsing tool, to convert a csv file into a 2 dimension array as rows and columns for easy enumerating.</Description>
+    <PublishRepositoryUrl>true</PublishRepositoryUrl>
+    <IncludeSymbols>true</IncludeSymbols>
+    <SymbolPackageFormat>snupkg</SymbolPackageFormat>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.SourceLink.GitHub" Version="1.0.0" PrivateAssets="All" />
+  </ItemGroup>
+
 
 </Project>
